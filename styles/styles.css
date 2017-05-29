@@ -1,4 +1,8 @@
 body{
-	background-image: url("../resources/giphy.gif");
+	background: url("../resources/giphy.gif");
+/*	background-size: cover;*/
+/*
+	background-color: aquamarine;
 	background-repeat: no-repeat;
+*/
 }
