@@ -20,7 +20,12 @@
 					 	<div class="form-group row">
 							<label for="example-text-input" class="col-2 col-form-label">City</label>
 							<div class="col-10">
-								<input name="city" class="form-control" type="text" placeholder="Enter your city" id="example-text-input">
+							<input list="<идентификатор>" class="form-control" placeholder="Enter your city">
+								<datalist id="<идентификатор>">
+									 <option value="Текст1">
+									 <option value="Текст2">
+								</datalist>
+<!--								<input name="city" class="form-control" type="text" placeholder="Enter your city" id="example-text-input">-->
 							</div>
 						</div>
 						<div class="form-group row">
@@ -29,6 +34,7 @@
 								<input class="form-control" type="date" value="<?php echo date('Y-m-d'); ?>" id="example-datetime-local-input">
 							</div>
 						</div>
+						
 						<button type="submit" class="btn btn-primary">Get forecast</button>
 					</div>
 				</form>
