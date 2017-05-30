@@ -29,14 +29,16 @@
 								<input class="form-control" type="date" value="<?php echo date('Y-m-d'); ?>" id="example-datetime-local-input">
 							</div>
 						</div>
+						<button type="submit" class="btn btn-primary">Get forecast</button>
 					</div>
 				</form>
+				<footer>
+					<div id="ftr">
+						&copy;Krizhevskiy 2017
+					</div>
+				</footer>
 			</div>
 		</div>
 	</body>
-	<div id="ftr">
-		<footer>
-			&copy;Krizhevskiy 2017
-		</footer>
-	</div>
+	
 </html>

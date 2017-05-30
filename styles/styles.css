@@ -3,6 +3,7 @@ body{
 	background-position:top;
 	background-size: 100%;
 	background-repeat: no-repeat;
+	height: 100%;
 }
 
 #cntnr{
@@ -22,6 +23,7 @@ body{
     position: absolute;
     top: 0px;
     background: rgba(255, 255, 255, 0.65);
+	z-index: -1;
 	position: fixed;
 }
 
@@ -31,9 +33,14 @@ body{
 }
 
 footer{
-/*	position: sticky;*/
 	text-align: center;
+	padding-top: 28%;
 }
 #ftr{
+/*
+	position: relative;
+	min-height: 95%;
 	z-index: 5;
+	flex: 1 0 auto;
+*/
 }
