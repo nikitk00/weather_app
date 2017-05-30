@@ -12,11 +12,31 @@
 	<body>
 		<div class="opsty">
 			<div class="container" id="cntnr">
-				<p>Welcome on my weather website!</p>
+				<form method="post">
+					 <div class="form-group">
+					 	<div class="hdr">
+					 		<b>To get weather forecast, please enter your city</b>
+					 	</div>
+					 	<div class="form-group row">
+							<label for="example-text-input" class="col-2 col-form-label">City</label>
+							<div class="col-10">
+								<input name="city" class="form-control" type="text" placeholder="Enter your city" id="example-text-input">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="example-datetime-local-input" class="col-2 col-form-label">Date and time</label>
+							<div class="col-10">
+								<input class="form-control" type="date" value="<?php echo date('Y-m-d'); ?>" id="example-datetime-local-input">
+							</div>
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 	</body>
-	<footer>
-		
-	</footer>
+	<div id="ftr">
+		<footer>
+			&copy;Krizhevskiy 2017
+		</footer>
+	</div>
 </html>
