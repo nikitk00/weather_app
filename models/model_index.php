@@ -1,4 +1,7 @@
 <?php
+
+require_once('model_database.php');
+
 $apiid = "711adf2f4a53502b33d9632b78518c63";
 
 
@@ -12,18 +15,26 @@ $j = file_get_contents('./resources/city.list.json', FILE_USE_INCLUDE_PATH, NULL
 
 echo "<br>"."<br>";
 
-ini_set('memory_limit', '-1');//!!!!!!!!!!!!!warning!
+ini_set('memory_limit', '-1');//!!!!!!!!!!!!!warning!be carefull
 
-$cts = json_decode($j);
+$tmp = json_decode($j);
+
+$cts = (array)$tmp;
+
+$link = db_connect();
+
+$temp = $cts[0];
+echo $temp;
+
 //var_dump($cts);
 
-for($i = 0; $i < count($cts); $i++){
-	foreach($cts[$i] as $a){
-		var_dump($a);
-		echo '<br>';
-	}
-	echo '<br>'.$i. '<br>';
-}
+//for($i = 0; $i < count($cts); $i++){
+//	foreach($cts[$i] as $a){
+////		var_dump($a);
+////		echo '<br>';
+//	}
+//	echo '<br>'.$i. '<br>';
+//}
 
 
 
