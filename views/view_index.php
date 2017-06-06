@@ -22,8 +22,10 @@
 							<div class="col-10">
 							<input list="<идентификатор>" class="form-control" placeholder="Enter your city">
 								<datalist id="<идентификатор>">
-									 <option value="Текст1">
-									 <option value="Текст2">
+								<option value="ffd"
+								 <?php for($i = 0; $i < sizeof($cts)/100000; $i++){ ?>
+										<option value="<? echo $cts[$i]->name; ?>"></option>
+									 <?php } ?>
 								</datalist>
 <!--								<input name="city" class="form-control" type="text" placeholder="Enter your city" id="example-text-input">-->
 							</div>

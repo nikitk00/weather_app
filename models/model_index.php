@@ -1,6 +1,7 @@
 <?php
 
 require_once('model_database.php');
+$link = db_connect();
 
 $apiid = "711adf2f4a53502b33d9632b78518c63";
 
@@ -9,22 +10,32 @@ $apiid = "711adf2f4a53502b33d9632b78518c63";
 
 $cities = array();
 
+set_time_limit(0);
 
 
 $j = file_get_contents('./resources/city.list.json', FILE_USE_INCLUDE_PATH, NULL, 0, filesize('./resources/city.list.json'));
 
 echo "<br>"."<br>";
 
-ini_set('memory_limit', '-1');//!!!!!!!!!!!!!warning!be carefull
+ini_set('memory_limit', '-1');//!!!!!!!!!!!!!warning!be carefull with it
 
 $tmp = json_decode($j);
 
 $cts = (array)$tmp;
 
-$link = db_connect();
+
 
 $temp = $cts[0];
-echo $temp;
+echo sizeof($cts).'<br><br>';
+
+for($i = 0; $i < sizeof($cts); $i++){
+	add_city($link, $cts[$i]->id, $cts[$i]->name, $cts[$i]->country, $cts[$i]->coord->lon, $cts[$i]->coord->lat) ;
+}
+//for($i = (sizeof($cts)/2+1); $i < sizeof($cts); $i++){
+//	echo $cts[$i]->code.'<br>';	
+//}
+
+
 
 //var_dump($cts);
 
