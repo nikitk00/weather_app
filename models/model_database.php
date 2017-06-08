@@ -33,8 +33,29 @@ function add_city($link, $id, $name, $country, $lon, $lat){
     return true;
 }
 
-function get_city_by_name($link, $name){
-	return null;
+function get_city_by_id($link, $id){
+	$q = sprintf("SELECT * FROM wthr_cities WHERE id='%d'", (int)$id);
+	$result = mysqli_query($link, $q);
+    
+    if(!$result)
+        die(mysqli_error($link));
+    
+    $city = mysqli_fetch_assoc($result);
+    
+    return $city;
 }
+
+function get_city_by_name($link, $name){
+	$q = sprintf("SELECT * FROM wthr_cities WHERE name='%s'", mysqli_real_escape_string($link, $name));
+	$result = mysqli_query($link, $q);
+    
+    if(!$result)
+        die(mysqli_error($link));
+    
+    $city = mysqli_fetch_assoc($result);
+    
+    return $city;
+}
+
 
 ?>
