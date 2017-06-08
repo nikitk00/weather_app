@@ -33,4 +33,8 @@ function add_city($link, $id, $name, $country, $lon, $lat){
     return true;
 }
 
+function get_city_by_name($link, $name){
+	return null;
+}
+
 ?>

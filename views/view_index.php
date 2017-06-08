@@ -19,20 +19,20 @@
 					 	</div>
 					 	<div class="form-group row">
 							<label for="example-text-input" class="col-2 col-form-label">City</label>
-							<div class="col-10">
+							<div class="col-9">
 							<input list="<идентификатор>" class="form-control" placeholder="Enter your city">
 								<datalist id="<идентификатор>">
-								<option value="ffd"
-								 <?php for($i = 0; $i < sizeof($cts)/100000; $i++){ ?>
-										<option value="<? echo $cts[$i]->name; ?>"></option>
+								<option value="ffd"></option>
+								 <?php for($i = 0; $i < sizeof($cts)/10000; $i++){ ?>
+										<option value="<?php echo $cts[$i]->name; ?>"></option>
 									 <?php } ?>
 								</datalist>
 <!--								<input name="city" class="form-control" type="text" placeholder="Enter your city" id="example-text-input">-->
 							</div>
 						</div>
 						<div class="form-group row">
-							<label for="example-datetime-local-input" class="col-2 col-form-label">Date and time</label>
-							<div class="col-10">
+							<label for="example-datetime-local-input" class="col-2 col-form-label">Date</label>
+							<div class="col-9">
 								<input class="form-control" type="date" value="<?php echo date('Y-m-d'); ?>" id="example-datetime-local-input">
 							</div>
 						</div>

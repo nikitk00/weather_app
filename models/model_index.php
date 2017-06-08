@@ -29,7 +29,8 @@ $temp = $cts[0];
 echo sizeof($cts).'<br><br>';
 
 for($i = 0; $i < sizeof($cts); $i++){
-	add_city($link, $cts[$i]->id, $cts[$i]->name, $cts[$i]->country, $cts[$i]->coord->lon, $cts[$i]->coord->lat) ;
+//	add_city($link, $cts[$i]->id, $cts[$i]->name, $cts[$i]->country, $cts[$i]->coord->lon, $cts[$i]->coord->lat) ;
+//	echo $i.'<br>';
 }
 //for($i = (sizeof($cts)/2+1); $i < sizeof($cts); $i++){
 //	echo $cts[$i]->code.'<br>';	
