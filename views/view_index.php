@@ -22,31 +22,33 @@
 							<div class="col-9">
 							<input list="<идентификатор>" class="form-control" placeholder="Enter your city">
 								<datalist id="<идентификатор>">
-								<option value="ffd"></option>
+								<option value="fdfff54325fd"></option>
 								 <?php for($i = 0; $i < sizeof($cts)/10000; $i++){ ?>
 										<option value="<?php echo $cts[$i]->name; ?>"></option>
 									 <?php } ?>
 								</datalist>
-<!--								<input name="city" class="form-control" type="text" placeholder="Enter your city" id="example-text-input">-->
 							</div>
 						</div>
+<!--
 						<div class="form-group row">
 							<label for="example-datetime-local-input" class="col-2 col-form-label">Date</label>
 							<div class="col-9">
 								<input class="form-control" type="date" value="<?php echo date('Y-m-d'); ?>" id="example-datetime-local-input">
 							</div>
 						</div>
+-->
 						
-						<button type="submit" class="btn btn-primary">Get forecast</button>
+						<button type="sumit" class="btn btn-primary">Get forecast</button>
 					</div>
 				</form>
-				<footer>
-					<div id="ftr">
-						&copy;Krizhevskiy 2017
-					</div>
-				</footer>
+				
 			</div>
 		</div>
 	</body>
+	<footer>
+		<div id="ftr">
+			&copy;Krizhevskiy 2017
+		</div>
+	</footer>
 	
 </html>

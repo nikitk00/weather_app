@@ -1,9 +1,9 @@
 <?php
 
 require_once('model_database.php');
+require_once('api_requests.php');
 $link = db_connect();
 
-$apiid = "711adf2f4a53502b33d9632b78518c63";
 
 
 //$j = file_get_contents('./resources/city.list.json', FILE_USE_INCLUDE_PATH);
@@ -27,37 +27,25 @@ $cts = (array)$tmp;
 
 
 //echo sizeof($cts).'<br><br>';
+try{
+	$d = get_forecast_by_id(1851632);
+//	var_dump($d);
+} catch (Exception $ex){
+	echo $ex->getMessage();
+}
+
+weather_format($d);
+
+//for($i = 0; $i <= 32; $i = $i + 8){
+//echo $d->list[$i]->dt_txt.' '.$d->list[$i]->weather[0]->description.' '.($d->list[$i]->main->temp-273.15).' '.$d->list[$i]->weather[0]->icon.'<br>';
+//}
 
 
-echo get_city_by_id($link, 820073)['name'].'<br>';
-echo get_city_by_name($link, 'Федоровка')['id'].'<br>';
-
-
-
-$j = file_get_contents('http://api.openweathermap.org/data/2.5/forecast?id=1851632&appid='.$apiid);
-$data = json_decode($j);
-
-//var_dump($data);
-
-echo $data->cod.'<br>';
-echo $data->city->id.'<br>';
-echo $data->city->name.'<br>';
-echo $data->city->country.'<br>';
-echo $data->list[1]->main->temp.'<br><br>';
-echo $data->city->coord->lon.'<br>';
-echo $data->city->coord->lat.'<br>';
-echo $data->cod.'<br>';
-
-//var_dump($data);
+//echo get_city_by_id($link, 820073)['name'].'<br>';
+//echo get_city_by_name($link, 'Федоровка')['id'].'<br>';
 
 
 
-//$doc = new DOMDocument;
-//$doc->loadHTMLFile("http://samples.openweathermap.org/data/2.5/forecast?id=524901&appid=b1b15e88fa797225412429c1c50c122a1");
-//$data = $doc->getElementsByTagName('pre');
-//
-////var_dump($doc);
-//echo $data;
 
 
 

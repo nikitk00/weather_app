@@ -22,7 +22,7 @@ body{
     height: 100%;
     position: absolute;
     top: 0px;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.88);
 	z-index: -1;
 	position: fixed;
 }
@@ -34,7 +34,13 @@ body{
 
 footer{
 	text-align: center;
-	margin-top: 48%;
+	position: absolute;
+	margin-top: 43%;
+	margin-left: 46%;
+/*	margin-top: 48%;*/
+}
+.table{
+	width: 100%;
 }
 #ftr{
 /*
