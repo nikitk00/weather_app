@@ -34,7 +34,9 @@ try{
 	echo $ex->getMessage();
 }
 
-weather_format($d);
+//weather_format($d);
+
+find_city('London');
 
 //for($i = 0; $i <= 32; $i = $i + 8){
 //echo $d->list[$i]->dt_txt.' '.$d->list[$i]->weather[0]->description.' '.($d->list[$i]->main->temp-273.15).' '.$d->list[$i]->weather[0]->icon.'<br>';

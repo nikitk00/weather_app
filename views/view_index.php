@@ -12,7 +12,7 @@
 	<body>
 		<div class="opsty">
 			<div class="container" id="cntnr">
-				<form method="post">
+				<form method="post" action="#">
 					 <div class="form-group">
 					 	<div class="hdr">
 					 		<b>To get weather forecast, please enter your city</b>
