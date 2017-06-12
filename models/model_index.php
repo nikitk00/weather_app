@@ -8,25 +8,7 @@ $link = db_connect();
 
 //$j = file_get_contents('./resources/city.list.json', FILE_USE_INCLUDE_PATH);
 
-$cities = array();
 
-set_time_limit(0);
-
-
-$j = file_get_contents('./resources/city.list.json', FILE_USE_INCLUDE_PATH, NULL, 0, filesize('./resources/city.list.json'));
-
-echo "<br>"."<br>";
-
-ini_set('memory_limit', '-1');//!!!!!!!!!!!!!warning!be carefull with it
-
-$tmp = json_decode($j);
-
-$cts = (array)$tmp;
-
-
-
-
-//echo sizeof($cts).'<br><br>';
 try{
 	$d = get_forecast_by_id(1851632);
 //	var_dump($d);

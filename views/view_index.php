@@ -10,30 +10,30 @@
 		<title>Welcome on Nikita's weather app! Choose your city</title>
 	</head>
 	<body>
-		<div class="opsty">
-			<div class="container" id="cntnr">
-				<form method="post" action="models/model_forecast.php">
-					 <div class="form-group">
-					 	<div class="hdr">
-					 		<b>To get weather forecast, please enter your city</b>
-					 	</div>
-					 	<div class="form-group row">
-							<label for="example-text-input" class="col-2 col-form-label">City</label>
-							<div class="col-9">
-							<input list="<идентификатор>" name="city" class="form-control" placeholder="Enter your city">
-								<datalist id="<идентификатор>">
-									<option value="test"></option>
-									<?php for($i = 0; $i < sizeof($cts)/10000; $i++){ ?>
-										<option value="<?php echo $cts[$i]->name; ?>"></option>
-									<?php } ?>
-								</datalist>
+		<div class="bgrnd">
+			<div class="opsty">
+				<div class="container" id="cntnr">
+					<form method="post" action="models/model_forecast.php">
+						 <div class="form-group">
+							<div class="hdr">
+								<b>To get weather forecast, please enter your city</b>
 							</div>
+							<div class="form-group row">
+								<label for="example-text-input" class="col-2 col-form-label">City</label>
+								<div class="col-9">
+								<input list="<идентификатор>" title="Minimum 3 symbols" name="city" class="form-control" placeholder="Enter your city" required pattern=".{3,}">
+									<datalist id="<идентификатор>">
+										<?php for($i = 0; $i < sizeof($cts)/10000; $i++){ ?>
+											<option value="<?php echo $cts[$i]->name; ?>"></option>
+										<?php } ?>
+									</datalist>
+								</div>
+							</div>
+
+							<button type="sumit" class="btn btn-primary">Get forecast</button>
 						</div>
-						
-						<button type="sumit" class="btn btn-primary">Get forecast</button>
-					</div>
-				</form>
-				
+					</form>
+				</div>
 			</div>
 		</div>
 	</body>

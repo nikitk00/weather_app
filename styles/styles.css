@@ -1,20 +1,41 @@
 body{
+	width: 100%;
+	height: 100%;
 	background: url("/weather_app/resources/wthrgif.gif");
 	background-position: top;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 /*	height: 100%;*/
 }
-
+.bgrnd{
+	height: 100%;
+	width: 100%;
+}
 #cntnr{
+	font-family: impact;
+	font-size: 24px;
 	padding-top: 1.5%;
 	text-align: center;
 	margin-top: 10%;
 	margin-bottom: 20%;
-	border-radius: 12px;
+	border-radius: 15px;
 	height: 50%;
 	width: 47%;
 	background-color: rgba(150, 150, 150, 0.3);
+}
+#cntnr_frcs{
+	padding-top: 1.5%;
+	text-align: center;
+	margin-top: 10%;
+	margin-bottom: 20%;
+	border-radius: 15px;
+	height: 70%;
+	width: 65%;
+	background-color: rgba(150, 150, 150, 0.3);
+}
+#cntnr_frcs img{
+/*	height: 100%;*/
+	width: 100%;
 }
 
 .opsty{
@@ -28,8 +49,19 @@ body{
 }
 
 .hdr{
+	font-family: impact;
 	font-weight: bold;
+	font-size: 28px;
 	margin-bottom: 3.5%;
+}
+
+.hdr_city{
+	font-family: impact;
+	font-size: 72px;
+	text-align: center;
+	font-weight: bold;
+	margin-top: 2.5%;
+	margin-bottom: -8%;
 }
 
 footer{
@@ -42,11 +74,15 @@ footer{
 
 table{
 	width: 100%;
-}
-td, th {
+	height: 90%;
 	text-align: center;
-    padding: 2%; /* Поля вокруг текста */
-   }
+	font-size: 32px;
+}
+td,th{
+	font-family: impact;
+	text-align: center;
+    padding: 1%;
+}
 
 
 #ftr{
@@ -56,4 +92,16 @@ td, th {
 	z-index: 5;
 	flex: 1 0 auto;
 */
+}
+@media screen and (max-width: 1366px){
+	.hdr_city{ font-size: 52px; }
+	table{ font-size: 24px; }
+}
+@media screen and (max-width: 1024px){
+	.hdr_city{ font-size: 40px; }
+	table{ font-size: 16px; }
+}
+@media screen and (max-width: 800px){
+	.hdr_city{ font-size: 28px; }
+	table{ font-size: 12px; }
 }

@@ -57,5 +57,26 @@ function get_city_by_name($link, $name){
     return $city;
 }
 
+function push_forecast($link, $report){
+	$q = "INSERT INTO weather_cache (name, country, coords, date, pic, temp, fallout) VALUES ('%s', '%s', '%s', '%s', '%s', '%f', '%f')";
+	$query = sprintf($q, 
+					 mysqli_real_escape_string($link,$report['name']), 
+					 mysqli_real_escape_string($link,$report['country']), 
+					 mysqli_real_escape_string($link,implode(';',$report['coords'])), 
+					 mysqli_real_escape_string($link,$report['date']), 
+					 mysqli_real_escape_string($link,$report['pic']), 
+					 mysqli_real_escape_string($link,$report['temp']), 
+					 mysqli_real_escape_string($link,$report['fallout']));
+	$result = mysqli_query($link, $query);
+        
+    if(!$result)
+        die(mysqli_error($link));
+    
+    return true;
+}
+
+function get_forecast($link, $city){
+	
+}
 
 ?>

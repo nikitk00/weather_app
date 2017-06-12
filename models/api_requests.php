@@ -18,6 +18,8 @@ function find_city($name){
 	$res['id'] = $data->list[0]->id;
 	$res['name'] = $data->list[0]->name;
 	$res['country'] = $data->list[0]->sys->country;
+	$res['coord']['lat'] = $data->list[0]->coord->lat;
+	$res['coord']['lon'] = $data->list[0]->coord->lon;
 	return $res;
 }
 
@@ -25,7 +27,7 @@ function weather_format($data){
 	$res = array();
 	for($i = 0; $i < 5; $i++){
 		if(isset($data->list)){
-			$res[$i]['date'] = date('Y-m-d', $data->list[$i*8]->dt);     // date info
+			$res[$i]['date'] = date('d-m', $data->list[$i*8]->dt);     // date info
 			$res[$i]['pic'] = 'http://openweathermap.org/img/w/'.$data->list[$i*8]->weather[0]->icon.'.png';    // pic of weather
 
 
@@ -44,7 +46,7 @@ function weather_format($data){
 				$s = $j;
 			}
 			$res[$i]['avg_t'] = round(($tt/$s), 1);    // average temperature per day, C
-			$res[$i]['sum_rain'] = $sr;   // summary fallout per day, mm
+			$res[$i]['sum_rain'] = round($sr, 2);   // summary fallout per day, mm
 
 //			echo '<br><br>'.$res[$i]['avg_t'].'<br>';
 		}

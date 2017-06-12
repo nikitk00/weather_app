@@ -11,28 +11,32 @@
 	</head>
 	<body>
 		<div class="opsty">
-			<h1><?php echo $city['name']; ?></h1>
-			<div class="container" id="cntnr">
+			<div class="hdr_city"><a href="/weather_app/"><?php echo $city['name'].', '.$city['country'].'('.round($city['coord']['lat'], 1).', '.round($city['coord']['lon'], 1).')'; ?></a></div>
+			<div class="container" id="cntnr_frcs">
 <!--				<div class="table">-->
 					<table>
 					<tr>
+						<th>Date</th>
 						<?php for($i = 0; $i < 5; $i++){ ?>
 						<th><?php echo $report[$i]['date']; ?></th>
 						<?php } ?>
 					</tr>
 					<tr>
+						<th></th>
 						<?php for($i = 0; $i < 5; $i++){ ?>
 						<td><img src="<?php echo $report[$i]['pic']; ?>"></td>
 						<?php } ?>
 					</tr>
 					<tr>
+						<th>Temperature, &#x2103</th>
 						<?php for($i = 0; $i < 5; $i++){ ?>
 						<td><?php echo $report[$i]['avg_t']; ?></td>
 						<?php } ?>
 					</tr>
 					<tr>
+						<th>Fallout, mm</th>
 						<?php for($i = 0; $i < 5; $i++){ ?>
-						<td><?php echo $report[$i]['sum_rain']; ?></td>
+						<td><?php echo ($report[$i]['sum_rain'] > 0 ? $report[$i]['sum_rain'] : '-'); ?></td>
 						<?php } ?>
 					</tr>
 					
