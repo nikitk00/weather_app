@@ -14,11 +14,18 @@
 			<div class="container" id="cntnr">
 				<div class="table">
 					<table>
-					<tr><th><iframe src="http://api.openweathermap.org/data/2.5/weather?id=1851632&mode=html&appid=711adf2f4a53502b33d9632b78518c63">Problem</iframe></th>
+					<tr>
+					<?php for($i = 0; $i < 5; $i++){ ?>
+					<th><?php echo report[$i]['date'] ?></th>
+					
+<!--
 					<th>2</th>
 					<th>3</th>
 					<th>4</th>
-					<th>5</th></tr>
+					<th>5</th>
+-->
+				<?php } ?>
+					</tr>
 					</table>
 				</div>
 				<footer>
