@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="styles/styles.css">
+		<link rel="stylesheet" href="/weather_app/styles/styles.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
@@ -11,12 +11,30 @@
 	</head>
 	<body>
 		<div class="opsty">
+			<h1><?php echo $city['name']; ?></h1>
 			<div class="container" id="cntnr">
-				<div class="table">
+<!--				<div class="table">-->
 					<table>
 					<tr>
-					<?php for($i = 0; $i < 5; $i++){ ?>
-					<th><?php echo report[$i]['date'] ?></th>
+						<?php for($i = 0; $i < 5; $i++){ ?>
+						<th><?php echo $report[$i]['date']; ?></th>
+						<?php } ?>
+					</tr>
+					<tr>
+						<?php for($i = 0; $i < 5; $i++){ ?>
+						<td><img src="<?php echo $report[$i]['pic']; ?>"></td>
+						<?php } ?>
+					</tr>
+					<tr>
+						<?php for($i = 0; $i < 5; $i++){ ?>
+						<td><?php echo $report[$i]['avg_t']; ?></td>
+						<?php } ?>
+					</tr>
+					<tr>
+						<?php for($i = 0; $i < 5; $i++){ ?>
+						<td><?php echo $report[$i]['sum_rain']; ?></td>
+						<?php } ?>
+					</tr>
 					
 <!--
 					<th>2</th>
@@ -24,10 +42,9 @@
 					<th>4</th>
 					<th>5</th>
 -->
-				<?php } ?>
-					</tr>
+				
 					</table>
-				</div>
+<!--				</div>-->
 				<footer>
 					<div id="ftr">
 						&copy;Krizhevskiy 2017

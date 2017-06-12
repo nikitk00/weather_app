@@ -39,9 +39,16 @@ footer{
 	margin-left: 46%;
 /*	margin-top: 48%;*/
 }
-.table{
+
+table{
 	width: 100%;
 }
+td, th {
+	text-align: center;
+    padding: 2%; /* Поля вокруг текста */
+   }
+
+
 #ftr{
 /*
 	position: relative;
