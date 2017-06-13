@@ -5,7 +5,6 @@ body{
 	background-position: top;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
-/*	height: 100%;*/
 }
 .bgrnd{
 	height: 100%;
@@ -40,7 +39,6 @@ body{
 	background-color: rgba(150, 150, 150, 0.3);
 }
 #cntnr_frcs img{
-/*	height: 100%;*/
 	width: 100%;
 }
 
@@ -74,13 +72,6 @@ footer{
 
 	text-align: center;
 	margin-top: 49.5%;
-/*	position: absolute;*/
-/*
-	margin-top: 43%;
-	margin-left: 46%;
-*/
-
-/*	margin-top: 48%;*/
 }
 
 table{
@@ -95,15 +86,6 @@ td,th{
     padding: 1%;
 }
 
-
-#ftr{
-/*
-	position: relative;
-	min-height: 95%;
-	z-index: 5;
-	flex: 1 0 auto;
-*/
-}
 @media screen and (max-width: 1366px){
 	.hdr_city{ font-size: 52px; }
 	table{ font-size: 24px; }
