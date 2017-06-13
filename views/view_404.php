@@ -11,45 +11,14 @@
 	</head>
 	<body>
 		<div class="opsty">
-			<div class="hdr_city"><a href="/weather_app/"><?php echo $report['name'].', '.$report['country'].'('.round($report['coord']['lat'], 1).', '.round($report['coord']['lon'], 1).')'; ?></a></div>
 			<div class="container" id="cntnr_frcs">
-<!--				<div class="table">-->
-					<table>
-					<tr>
-						<th>Date</th>
-						<?php for($i = 0; $i < 5; $i++){ ?>
-						<th><?php echo $report['date'][$i]; ?></th>
-						<?php } ?>
-					</tr>
-					<tr>
-						<th></th>
-						<?php for($i = 0; $i < 5; $i++){ ?>
-						<td><img src="http://openweathermap.org/img/w/<?php echo $report['pic'][$i]; ?>.png"></td>
-						<?php } ?>
-					</tr>
-					<tr>
-						<th>Temperature, &#x2103</th>
-						<?php for($i = 0; $i < 5; $i++){ ?>
-						<td><?php echo $report['temp'][$i]; ?></td>
-						<?php } ?>
-					</tr>
-					<tr>
-						<th>Fallout, mm</th>
-						<?php for($i = 0; $i < 5; $i++){ ?>
-						<td><?php echo ($report['fallout'][$i] > 0 ? $report['fallout'][$i] : '-'); ?></td>
-						<?php } ?>
-					</tr>
-									
-					</table>
-				
+				<div class="warning"><a href="/weather_app/">Error 404<br>Page not found!</a></div>
+				<footer>
+					<div id="ftr">
+						&copy;Krizhevskiy 2017
+					</div>
+				</footer>
 			</div>
-			
 		</div>
 	</body>
-	<footer>
-		<div id="ftr">
-			&copy;Krizhevskiy 2017
-		</div>
-	</footer>
-	
 </html>

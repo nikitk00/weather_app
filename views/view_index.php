@@ -13,7 +13,7 @@
 		<div class="bgrnd">
 			<div class="opsty">
 				<div class="container" id="cntnr">
-					<form method="post" action="models/model_forecast.php">
+					<form method="get" action="models/model_forecast.php">
 						 <div class="form-group">
 							<div class="hdr">
 								<b>To get weather forecast, please enter your city</b>
@@ -21,7 +21,7 @@
 							<div class="form-group row">
 								<label for="example-text-input" class="col-2 col-form-label">City</label>
 								<div class="col-9">
-								<input list="<идентификатор>" title="Minimum 3 symbols" name="city" class="form-control" placeholder="Enter your city" required pattern=".{3,}">
+								<input list="<идентификатор>" title="Minimum 3 symbols" name="city" class="form-control" placeholder="Enter your city" required pattern=".{3,16}">
 									<datalist id="<идентификатор>">
 										<?php for($i = 0; $i < sizeof($cts)/10000; $i++){ ?>
 											<option value="<?php echo $cts[$i]->name; ?>"></option>

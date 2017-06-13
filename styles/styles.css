@@ -11,6 +11,12 @@ body{
 	height: 100%;
 	width: 100%;
 }
+.warning{
+	font-family: impact;
+	text-align: center;
+	font-weight: bold;
+	font-size: 96px;
+}
 #cntnr{
 	font-family: impact;
 	font-size: 24px;
@@ -65,10 +71,15 @@ body{
 }
 
 footer{
+
 	text-align: center;
-	position: absolute;
+	margin-top: 49.5%;
+/*	position: absolute;*/
+/*
 	margin-top: 43%;
 	margin-left: 46%;
+*/
+
 /*	margin-top: 48%;*/
 }
 
